@@ -16,7 +16,7 @@ namespace ABC.BL
 
         public Klient Pobierz(int klientId)
         {
-            Klient klient = new Klient();
+            Klient klient = new Klient(klientId);
 
             if (klientId == 1)
             {
@@ -26,7 +26,7 @@ namespace ABC.BL
 
             }
 
-            return new Klient();
+            return klient;
                 
         }
 

@@ -21,7 +21,7 @@ namespace ABC.BL
         public int ProduktId { get; private set; }
         public Decimal? AktualnaCena { get; set; }
 
-        public string opis { get; set; }
+        public string Opis { get; set; }
 
         public string NazwaProduktu { get; set; }
 
