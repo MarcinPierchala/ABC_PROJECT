@@ -2,6 +2,16 @@
 {
     public class Klient
     {
+        public Klient()
+        {
+
+        }
+
+        public Klient(int klientId)
+        {
+            KlientId = klientId;
+        }
+
         public static int Counter { get; set; }
 
         private string _nazwisko;
@@ -48,9 +58,24 @@
             if (string.IsNullOrWhiteSpace(Nazwisko))
                 poprawne = false;
             if (string.IsNullOrWhiteSpace(Email))
-                poprawne |= false;
+                poprawne = false;
 
             return poprawne;
+        }
+
+        public bool Zapisz()
+        {
+            return true;
+        }
+
+        public Klient Pobierz(int klientId)
+        {
+            return new Klient();
+        }
+
+        public List<Klient> Pobierz()
+        {
+            return new List<Klient>();
         }
 
     }

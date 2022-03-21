@@ -99,19 +99,23 @@ namespace ABC.BLTest
             Assert.AreEqual(wartoscOczekiwana, aktualnaWartosc);
         }
 
-       /* [TestMethod]
+        [TestMethod]
         public void ZwalidujEmailPusty()
         {
             //Arrange
             var klient = new Klient();
-            klient.Nazwisko = "Pierchla";
+            klient.Nazwisko = "Pierchala";
             var wartoscOczekiwana = false;
+
+            var klient1 = new Klient(100);
+            var klient2 = new Klient();
+
 
             //ACT
             var aktualnaWartosc = klient.Zwaliduj();
 
             //Assert
             Assert.AreEqual(wartoscOczekiwana, aktualnaWartosc);
-        }*/
+        }
     }
 }
