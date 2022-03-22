@@ -8,7 +8,12 @@ namespace ABC.BL
 {
     public class KlientRepository
     {
+        private AdresRepository adresRepository { get; set; }
 
+        public KlientRepository()
+        {
+            adresRepository = new AdresRepository();
+        }
         public bool Zapisz()
         {
             return true;
@@ -17,6 +22,8 @@ namespace ABC.BL
         public Klient Pobierz(int klientId)
         {
             Klient klient = new Klient(klientId);
+
+            klient.AdresList = adresRepository.PobierzPoKlientId(klientId).ToList();
 
             if (klientId == 1)
             {

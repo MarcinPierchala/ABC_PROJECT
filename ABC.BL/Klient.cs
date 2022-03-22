@@ -2,7 +2,7 @@
 {
     public class Klient
     {
-        public Klient()
+        public Klient() : this(0)
         {
 
         }
@@ -10,7 +10,10 @@
         public Klient(int klientId)
         {
             KlientId = klientId;
+            AdresList = new List<Adres>();
         }
+
+        public List<Adres> AdresList { get; set; }
 
         public static int Counter { get; set; }
 
