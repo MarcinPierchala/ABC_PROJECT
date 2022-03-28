@@ -19,6 +19,13 @@ namespace ABC.BL
         }
 
         public int ZamowienieId { get; private set; }
+
+        public List<PozycjaZamowienia> pozycjeZamowienia { get; set; }
+
+        public int KlientId { get; set; }
+
+        public int AdresDostawyId { get; set; }
+
         public DateTimeOffset? DataZamowienia { get; set; }
 
         /// <summary>
