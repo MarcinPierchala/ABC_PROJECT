@@ -55,6 +55,8 @@
             } 
         }
 
+        public int KlientTyp { get; set; }
+
         public bool Zwaliduj()
         {
             var poprawne = true;
