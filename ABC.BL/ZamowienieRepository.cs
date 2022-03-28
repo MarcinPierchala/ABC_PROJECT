@@ -24,6 +24,49 @@ namespace ABC.BL
             return zamowienie;
         }
 
+        public WyswietanieZamowienia PobierzZamowienieDoWyswietlenia(int zamowienieId)
+        {
+            WyswietanieZamowienia wyswietlenieZamowienia = new WyswietanieZamowienia();
+
+            if(zamowienieId == 10)
+            {
+                wyswietlenieZamowienia.Imie = "Marcin";
+                wyswietlenieZamowienia.Nazwisko = "Pierchala";
+                wyswietlenieZamowienia.DataZamowienia = new DateTimeOffset(2022, 3, 28, 21, 20, 00, new TimeSpan(7, 0, 0));
+                wyswietlenieZamowienia.AdresDostawy = new Adres()
+                {
+                    AdresTyp = 1,
+                    Ulica = "Ofiar NWO",
+                    Miasto = "Deep_London",
+                    Kraj = "Polin",
+                    KodPocztowy = "321-00"
+                };
+            }
+
+            wyswietlenieZamowienia.WyswPozycjiZamLista = new List<WyswPozycjiZam>();
+
+            if(zamowienieId == 10)
+            {
+                var wyswietlaniePozycjiZamowienia = new WyswPozycjiZam()
+                {
+                    NazwaProduktu = "KBKAKMS",
+                    IloscZamowienia = 100,
+                    CenaZakupu = 321.22M
+                };
+                wyswietlenieZamowienia.WyswPozycjiZamLista.Add(wyswietlaniePozycjiZamowienia);
+
+                wyswietlaniePozycjiZamowienia = new WyswPozycjiZam()
+                {
+                    NazwaProduktu = "MArgolin",
+                    IloscZamowienia = 500,
+                    CenaZakupu = 22.32M
+                };
+                wyswietlenieZamowienia.WyswPozycjiZamLista.Add(wyswietlaniePozycjiZamowienia);
+            }
+
+            return wyswietlenieZamowienia;
+        }
+
         /// <summary>
         /// Zapisanie aktualnego zamowienia
         /// </summary>
