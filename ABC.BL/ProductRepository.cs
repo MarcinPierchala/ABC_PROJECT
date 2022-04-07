@@ -16,6 +16,9 @@ namespace ABC.BL
         public Produkt Pobierz(int produktId)
         {
             Produkt produkt = new Produkt(produktId);
+            Object mojObiekt = new Object();
+            Console.WriteLine("Ten obiekt : " + mojObiekt.ToString());
+            Console.WriteLine("Ten produkt : " + produkt.ToString());
 
             if(produktId == 2)
             {
