@@ -60,6 +60,11 @@ namespace ABC.BL
 
             return poprawnaWartosc;
         }
+
+        public override string ToString()
+        {
+            return DataZamowienia.Value.Date + " (" + ZamowienieId + ")";
+        }
     }
 }
 

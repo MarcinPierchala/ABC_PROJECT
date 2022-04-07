@@ -57,5 +57,10 @@ namespace ABC.BL
 
             return poprawnaWartosc;
         }
+
+        public override string ToString()
+        {
+            return NazwaProduktu;
+        }
     }
 }
