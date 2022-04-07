@@ -71,9 +71,23 @@ namespace ABC.BL
         /// Zapisanie aktualnego zamowienia
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Zamowienie zamowienie)
         {
-            return true;
+            var sukces = true;
+
+            if (zamowienie.MaZmiany && zamowienie.DaneSaPrawidlowe)
+            {
+                if (zamowienie.JestNowy)
+                {
+                    //trzeba wywołać insert
+                }
+                else
+                {
+                    //trzeba wywołać update
+                }
+            }
+
+            return sukces;
         }
     }
 }

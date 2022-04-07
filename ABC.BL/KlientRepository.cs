@@ -14,11 +14,7 @@ namespace ABC.BL
         {
             adresRepository = new AdresRepository();
         }
-        public bool Zapisz()
-        {
-            return true;
-        }
-
+        
         public Klient Pobierz(int klientId)
         {
             Klient klient = new Klient(klientId);
@@ -40,6 +36,25 @@ namespace ABC.BL
         public List<Klient> Pobierz()
         {
             return new List<Klient>();
+        }
+
+        public bool Zapisz(Klient klient)
+        {
+            var sukces = true;
+
+            if (klient.MaZmiany && klient.DaneSaPrawidlowe)
+            {
+                if (klient.JestNowy)
+                {
+                    //trzeba wywołać insert
+                }
+                else
+                {
+                    //trzeba wywołać update
+                }
+            }
+
+            return sukces;
         }
     }
 }

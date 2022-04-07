@@ -1,6 +1,6 @@
 ﻿namespace ABC.BL
 {
-    public class Klient
+    public class Klient : BaseClass
     {
         public Klient() : this(0)
         {
@@ -57,7 +57,7 @@
 
         public int KlientTyp { get; set; }
 
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawne = true;
             if (string.IsNullOrWhiteSpace(Nazwisko))

@@ -33,9 +33,23 @@ namespace ABC.BL
         /// Zapisanie aktualnego produktu
         /// </summary>
         /// <returns></returns>
-        public bool Zapisz()
+        public bool Zapisz(Produkt produkt)
         {
-            return true;
+            var sukces = true;
+
+            if(produkt.MaZmiany && produkt.DaneSaPrawidlowe)
+            {
+                if (produkt.JestNowy)
+                {
+                    //trzeba wywołać insert
+                }
+                else
+                {
+                    //trzeba wywołać update
+                }
+            }
+            
+            return sukces;
         }
     }
 }
