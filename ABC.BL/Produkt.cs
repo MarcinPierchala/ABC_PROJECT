@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABC.BL
 {
-    public class Produkt
+    public class Produkt : BaseClass
     {
         public Produkt()
         {
@@ -48,7 +48,7 @@ namespace ABC.BL
         /// Sprawdzenie danych produktu
         /// </summary>
         /// <returns></returns>
-        public bool Zwaliduj()
+        public override bool Zwaliduj()
         {
             var poprawnaWartosc = true;
 
