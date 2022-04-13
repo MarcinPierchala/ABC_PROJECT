@@ -15,7 +15,7 @@ namespace Common_1Test
             var oczekiwana = "Klocki Lego";
             
             //Act
-            var aktualna = ObslugaStringa.WstawSpacje(zrodlo);
+            var aktualna = zrodlo.WstawSpacje();
 
             //Assert
             Assert.AreEqual(oczekiwana, aktualna);
@@ -29,7 +29,7 @@ namespace Common_1Test
             var oczekiwana = "Klocki Lego";
             
             //Act
-            var aktualna = ObslugaStringa.WstawSpacje(zrodlo);
+            var aktualna = zrodlo.WstawSpacje();
 
             //Assert
             Assert.AreEqual(oczekiwana, aktualna);
