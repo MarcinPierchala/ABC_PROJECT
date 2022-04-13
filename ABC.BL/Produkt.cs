@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common_1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,9 @@ namespace ABC.BL
 
         public string NazwaProduktu
         {
-            get { return _NazwaProduktu; }
+            get {
+                return ObslugaStringa.WstawSpacje(_NazwaProduktu); 
+            }
             set { _NazwaProduktu = value; }
         }
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Common_1
 {
-    public class ObslugaStringa
+    public static class ObslugaStringa
     {
-        public string WstawSpacje(string zrodlo)
+        public static string WstawSpacje(string zrodlo)
         {
             string wynik = string.Empty;
 
