@@ -1,6 +1,8 @@
-﻿namespace ABC.BL
+﻿using Common_1;
+
+namespace ABC.BL
 {
-    public class Klient : BaseClass
+    public class Klient : BaseClass, ILogowanie
     {
         public Klient() : this(0)
         {

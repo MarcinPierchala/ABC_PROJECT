@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ABC.BL
 {
-    public class Produkt : BaseClass
+    public class Produkt : BaseClass, ILogowanie
     {
         public Produkt()
         {
